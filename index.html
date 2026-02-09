@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Hunt - Level 1</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2b2e6f, #1f2358);
+            font-family: Arial, sans-serif;
+
+            /* Center layout */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            width: 90%;
+            max-width: 360px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 18px;
+            font-size: 22px;   /* BIG text */
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 18px;
+            font-size: 22px;
+            background: #7ac943;
+            color: white;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6ab73b;
+        }
+    </style>
+
+    <script>
+        function checkAnswer() {
+            const ans = document.getElementById("ans").value.trim().toLowerCase();
+
+            if (ans === "cellar") {
+                window.location.href = "level2.html";
+            } else {
+                alert("Wrong answer! Try again 🔍");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="center">
+        <h1>🧩 Level 1</h1>
+        <input type="text" id="ans" placeholder="Your answer">
+
+        <button onclick="checkAnswer()">Submit</button>
+    </div>
+
+</body>
+</html>
